@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <Button
+        android:id="@+id/additionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/additionString"
+        app:layout_constraintEnd_toStartOf="@+id/subtractionButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/n2EditText" />
+
+    <Button
+        android:id="@+id/piButton"
+        android:layout_width="348dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/piString"
+        app:layout_constraintEnd_toEndOf="@+id/divisionButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/additionButton"
+        app:layout_constraintTop_toBottomOf="@+id/resultEditText" />
+
+    <Button
+        android:id="@+id/subtractionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/subtractionString"
+        app:layout_constraintEnd_toStartOf="@+id/multiplicationButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/additionButton"
+        app:layout_constraintTop_toBottomOf="@+id/n2EditText" />
+
+    <Button
+        android:id="@+id/multiplicationButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/multiplicationString"
+        app:layout_constraintEnd_toStartOf="@+id/divisionButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/subtractionButton"
+        app:layout_constraintTop_toBottomOf="@+id/n2EditText" />
+
+    <Button
+        android:id="@+id/divisionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="18dp"
+        android:text="@string/divisionString"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/multiplicationButton"
+        app:layout_constraintTop_toBottomOf="@+id/n2EditText" />
+
+    <EditText
+        android:id="@+id/n1EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="numberSigned|number|numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/numberLabel1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/resultEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="numberSigned|number|numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/resultLabel"
+        app:layout_constraintTop_toBottomOf="@+id/multiplicationButton" />
+
+    <EditText
+        android:id="@+id/n2EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="numberSigned|number|numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/numberLabel2"
+        app:layout_constraintTop_toBottomOf="@+id/n1EditText" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="348dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/piButton" />
+
+    <TextView
+        android:id="@+id/numberLabel1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/number1String"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/n1EditText"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/numberLabel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/number2String"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/n2EditText"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numberLabel1" />
+
+    <TextView
+        android:id="@+id/resultLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/resultString"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/resultEditText"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/additionButton" />
+</android.support.constraint.ConstraintLayout>

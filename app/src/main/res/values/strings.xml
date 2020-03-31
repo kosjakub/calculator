@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">calculator_v3</string>
+    <string name="action_settings">Settings</string>
+    <string name="additionString">+</string>
+    <string name="subtractionString">-</string>
+    <string name="multiplicationString">*</string>
+    <string name="divisionString">/</string>
+    <string name="piString">pi</string>
+    <string name="number1String">Liczba 1</string>
+    <string name="number2String">Liczba 2</string>
+    <string name="resultString">Wynik</string>
+</resources>
